@@ -1,4 +1,5 @@
 ﻿using FurkanSahin.TaskManagement.Domain.Entities;
+using FurkanSahin.TaskManagement.Persistance.Configurations;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -17,11 +18,12 @@ namespace FurkanSahin.TaskManagement.Persistance.Context
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<AppRole>().Property(i=>i.Definition).HasMaxLength(100);
-            
-
-
-            base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfiguration(new AppRoleConfiguration());
+            modelBuilder.ApplyConfiguration(new AppTaskConfiguration());
+            modelBuilder.ApplyConfiguration(new AppUserConfiguration());
+            modelBuilder.ApplyConfiguration(new NotificationConfiguration());
+            modelBuilder.ApplyConfiguration(new PriorityConfiguration());
+            modelBuilder.ApplyConfiguration(new TaskReportConfiguration());
         }
         public DbSet<AppRole> Roles { get; set; }
         public DbSet<AppTask> Tasks { get; set; }

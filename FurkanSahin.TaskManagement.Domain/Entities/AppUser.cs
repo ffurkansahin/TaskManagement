@@ -15,7 +15,7 @@ namespace FurkanSahin.TaskManagement.Domain.Entities
         public int AppRoleId { get; set; }
         //Navigation Properties
         public AppRole? Role { get; set; }
-        public List<AppTask>? Tasks { get; set; }
+        public List<AppTask>? AppTasks { get; set; }
         public List<Notification>? Notifications { get; set; }
     }
 }

@@ -20,8 +20,6 @@ namespace FurkanSahin.TaskManagement.Persistance.Configurations
             
             builder.Property(i=>i.AppTaskId).IsRequired();
 
-
-
         }
     }
 }

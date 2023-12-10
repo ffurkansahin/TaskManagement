@@ -13,7 +13,7 @@ namespace FurkanSahin.TaskManagement.Persistance.Configurations
     {
         public void Configure(EntityTypeBuilder<AppTask> builder)
         {
-            builder.Property(i => i.Priority).IsRequired(true);
+            builder.Property(i => i.PriorityId).IsRequired(true);
 
             builder.Property(i=>i.AppUserId).IsRequired(true);
 

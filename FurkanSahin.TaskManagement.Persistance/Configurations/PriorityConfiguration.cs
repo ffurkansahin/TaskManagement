@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace FurkanSahin.TaskManagement.Persistance.Configurations
 {
-    public class PriorityCongiguration : IEntityTypeConfiguration<Priority>
+    public class PriorityConfiguration : IEntityTypeConfiguration<Priority>
     {
         public void Configure(EntityTypeBuilder<Priority> builder)
         {

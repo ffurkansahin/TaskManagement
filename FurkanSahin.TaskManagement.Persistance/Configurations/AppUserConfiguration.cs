@@ -28,7 +28,7 @@ namespace FurkanSahin.TaskManagement.Persistance.Configurations
 
             builder.Property(i=>i.AppRoleId).IsRequired(true);
 
-            builder.HasMany(i => i.Tasks).WithOne(i => i.AppUser).HasForeignKey(i => i.AppUserId);
+            builder.HasMany(i => i.AppTasks).WithOne(i => i.AppUser).HasForeignKey(i => i.AppUserId);
             builder.HasMany(i => i.Notifications).WithOne(i => i.AppUser).HasForeignKey(i => i.AppUserId);
         }
     }
