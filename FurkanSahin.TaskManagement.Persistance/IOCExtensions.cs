@@ -1,4 +1,6 @@
-﻿using FurkanSahin.TaskManagement.Persistance.Context;
+﻿using FurkanSahin.TaskManagement.Application.Interfaces;
+using FurkanSahin.TaskManagement.Persistance.Context;
+using FurkanSahin.TaskManagement.Persistance.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,6 +20,8 @@ namespace FurkanSahin.TaskManagement.Persistance
             {
                 opt.UseSqlServer(configuration.GetConnectionString("Local"));
             });
+
+            services.AddScoped<IUserRepository, UserRepository>();
         }
     }
 }

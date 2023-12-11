@@ -1,0 +1,43 @@
+﻿@{
+    Layout = null;
+}
+
+<html>
+<head>
+    <link href="~/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div class="container">
+        <div class="card p-4 mt-5 w-50 mx-auto">
+
+            <div class="text-center">
+                <h5>Personel Management System</h5>
+                <p class="lead">
+                    <i>Login Page</i>
+                </p>
+            </div>
+
+            <form action="/Account/Login/" method="post" class="form-floating mt-3">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="username" name="Username" placeholder="Username">
+                    <label for="floatingInput">Username </label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input type="password" class="form-control" id="password" name="Password" placeholder="Password">
+                    <label for="floatingInput">Password </label>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary btn-lg" type="submit">Login</button>
+                    <span class="psw">Don't you have an account? <a href="/Account/Register/">Register</a></span>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+</body>
+</html>

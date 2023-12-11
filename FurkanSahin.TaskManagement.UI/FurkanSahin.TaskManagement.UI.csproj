@@ -18,4 +18,8 @@
     <ProjectReference Include="..\FurkanSahin.TaskManagement.Persistance\FurkanSahin.TaskManagement.Persistance.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
 </Project>
